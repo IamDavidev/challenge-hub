@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+}
+.app{
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+img {
+  width: 100%;
+  height: auto;
+}
+img::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+  position: relative;
+}
+main {
+  height: auto;
+  margin: 3rem 2rem;
+  background: hsl(244, 38%, 16%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  display:flex;
+  flex-direction: column-reverse;
+}
+.imgDesk{
+    display:none;
+}
+.imgCard {
+  position: relative;
+}
+
+.imgCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(277, 64%, 61%, 0.6);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+.headerContent h1 {
+  text-align: center;
+  margin: 2rem 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.headerContent > h1 > span {
+  color: hsl(277, 64%, 61%);
+  font-weight: 700;
+}
+.headerContent > p {
+  color: hsla(0, 0%, 100%, 0.6);
+  margin: 0 1.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+aside {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+aside > strong {
+  font-size: 1.5rem;
+}
+aside > span {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+}
+@media (min-width:1440px){
+    
+    .imgMobile{
+        display:none;
+    }
+    .imgDesk{
+        display:block;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto 10rem;
+    }
+    .cardContent{
+        grid-column: 1/2;
+    }
+    .headerContent{
+        padding:0 3rem;
+        text-align:left;
+        margin-top:1rem;
+    }
+    .headerContent > h1{
+        text-align:left;
+        font-size:2.4rem;
+    }
+    .headerContent > p{
+        font-size:1rem;
+    }
+    .imgCard{
+        grid-column: 2/3;
+    }
+    .footerContent{
+        display:flex;
+        margin: 1rem 0;
+        margin:6rem 0;
+    }
+    aside{
+        margin: 0rem 2.6rem;
+        align-items:flex-start;
+    }
+}
